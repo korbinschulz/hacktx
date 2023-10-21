@@ -1,0 +1,41 @@
+/* styles.css */
+
+.app-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /*background-color: #ffffff; /* Override global background with white */
+}
+
+input {
+  display: block;
+  margin: 10px 0;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Rounded corners */
+  background-color: #fff;
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
