@@ -1,23 +1,24 @@
-// components/LoginComponent.jsx
+// Updated LoginComponent.jsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';  // Import useNavigate
 import '../styles.css';
-
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../config/firebase';
 
 const LoginComponent = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");  // Added this line
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   
   const navigate = useNavigate();  // Initialize useNavigate
   
   const handleLogin = async () => {
-    /* try {
-      const user = await login(username, password);
-      // Navigate to home or dashboard
+    try {
+      await signInWithEmailAndPassword(auth, email, password);  // Updated this line
+      navigate('/home');
     } catch (err) {
-      setError("Invalid username or password");
-    } */
+      setError("Invalid email or password");
+    }
   };
   
   const goToSignUp = () => {
@@ -28,9 +29,9 @@ const LoginComponent = () => {
     <div>
       <input 
         type="text" 
-        placeholder="Username" 
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        placeholder="Email" 
+        value={email}  // Added this line
+        onChange={(e) => setEmail(e.target.value)}  // Added this line
       />
       <input 
         type="password" 
@@ -40,7 +41,7 @@ const LoginComponent = () => {
       />
       {error && <p>{error}</p>}
       <button onClick={handleLogin}>Login</button>
-      <button onClick={goToSignUp}>Don't have an account? Sign up</button>  {/* Add this line */}
+      <button onClick={goToSignUp}>Don&apos;t have an account? Sign up</button>
     </div>
   );
 };

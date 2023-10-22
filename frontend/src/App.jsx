@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginComponent from './utils/LoginComponent';
-import SignUpComponent from "./utils/SignUpComponent";
-
+import SignUpComponent from "./utils/SignupComponent";
 const App = () => {
   return (
     <div className="app-outer">
