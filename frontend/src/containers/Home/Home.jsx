@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="home-outer">
       <div className="home-inner">
-        <button className="home-btn">
+        <button onClick={() => navigate("/CheckIn")} className="home-btn">
           <BsCalendarCheck fontSize={"32px"} color="white" />
           Daily Check In
         </button>

@@ -30,7 +30,9 @@ const Nav = () => {
       />
       {isOpen && (
         <div className="nav-popout">
-          <p className="popout-text">Daily Check In</p>
+          <p onClick={() => navigate("/CheckIn")} className="popout-text">
+            Daily Check In
+          </p>
           <p className="popout-text">View Progress</p>
           <p className="popout-text">Mental Health Goals</p>
           <p onClick={() => navigate("/Affirmations")} className="popout-text">

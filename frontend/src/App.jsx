@@ -5,6 +5,7 @@ import Home from "./containers/Home/Home";
 import LoginComponent from "./utils/LoginComponent";
 import SignUpComponent from "./utils/SignUpComponent";
 import Affirmations from "./containers/Affirmations/Affirmations";
+import CheckIn from "./containers/CheckIn/CheckIn";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" element={<LoginComponent />} />
           <Route path="/signUp" element={<SignUpComponent />} />
           <Route path="/Affirmations" element={<Affirmations />} />
+          <Route path="/CheckIn" element={<CheckIn />} />
         </Routes>
       </Router>
     </div>
