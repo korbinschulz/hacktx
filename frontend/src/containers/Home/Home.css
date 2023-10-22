@@ -30,3 +30,7 @@
   align-items: center;
   gap: 10px;
 }
+
+.home-btn:hover {
+  scale: 1.03;
+}

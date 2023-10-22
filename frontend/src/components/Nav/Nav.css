@@ -51,6 +51,11 @@
   text-align: center;
 }
 
+.popout-text:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
 .homepage-icon {
   cursor: pointer;
 }
