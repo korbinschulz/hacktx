@@ -3,8 +3,10 @@ import { GoGoal } from "react-icons/go";
 import { MdOutlineTipsAndUpdates, MdOutlineEmergency } from "react-icons/md";
 import { GiProgression } from "react-icons/gi";
 import { BsCalendarCheck } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="home-outer">
       <div className="home-inner">
@@ -20,7 +22,7 @@ const Home = () => {
           <GoGoal fontSize={"32px"} color="white" />
           Mental Health Goals
         </button>
-        <button className="home-btn">
+        <button onClick={() => navigate("/Affirmations")} className="home-btn">
           <MdOutlineTipsAndUpdates fontSize={"32px"} color="white" />
           Daily Affirmations
         </button>
